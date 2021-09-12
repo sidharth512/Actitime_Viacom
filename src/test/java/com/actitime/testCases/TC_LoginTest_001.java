@@ -2,6 +2,7 @@ package com.actitime.testCases;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
@@ -76,7 +77,11 @@ import com.actitime.PageObjects.actitimeTypesofWorkpage;
 		
 	public void CreatCustomer() throws InterruptedException {
 		actitimeCustomerPage customer=new actitimeCustomerPage(driver);
-		customer.CustomerPagemethod();
+		String CustmoerName=randomstring()+"@gmail.com";
+		customer.CustomerPagemethod(CustmoerName);
+		String WORK=randomstring();
+		customer.workname( WORK);
+		
 	}
 	@Test(priority=5)
 	public void Setting() throws InterruptedException {
@@ -91,7 +96,8 @@ import com.actitime.PageObjects.actitimeTypesofWorkpage;
 	public void Leavepage() {
 		actitimeLeavePage Leave=new actitimeLeavePage (driver);
 		Leave.LeavePageMethod();
-		Leave.CreatLeaveMethod();
+		String NewLeave=randomstring()+1234;
+		Leave.CreatLeaveMethod(NewLeave);
 	
 		
 	}
@@ -99,5 +105,9 @@ import com.actitime.PageObjects.actitimeTypesofWorkpage;
 	public void logout() {
 		actitimeHomePage logout=new actitimeHomePage(driver);
 		logout.Homepagelogoutmethod();
+	}
+	public String randomstring() {
+		String Name=RandomStringUtils.randomAlphabetic(7);
+		return Name;
 	}
 }

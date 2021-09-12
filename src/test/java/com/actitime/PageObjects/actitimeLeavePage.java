@@ -20,8 +20,8 @@ public class actitimeLeavePage {
 	public void LeavePageMethod() {
 		CreateLeaveTypeLink.click();
 	}
-		public void CreatLeaveMethod() {
-		leaveTypeLightBoxnameField.sendKeys("PubgDay");
+		public void CreatLeaveMethod(String leave) {
+		leaveTypeLightBoxnameField.sendKeys(leave);
 		CreateLeavetypeLink.click();
 	}
 	

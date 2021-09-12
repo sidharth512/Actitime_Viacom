@@ -26,10 +26,12 @@ public class actitimeCustomerPage {
 		this.driver=driver;
 		
 	}
-	public void CustomerPagemethod() throws InterruptedException {
+	public void CustomerPagemethod(String name) throws InterruptedException {
 		Thread.sleep(5000);
-		customerNameTextfield.sendKeys("madWolf7676");	
-		CustomerDescriptionTextfield.sendKeys("good at work");
+		customerNameTextfield.sendKeys(name);
+	}
+		public void workname(String work) throws InterruptedException {
+		CustomerDescriptionTextfield.sendKeys(work);
 		dropdownButtonofproject.click();
 		Thread.sleep(4000);
 		for(int i=0;i<Projectsofthecustmor.size();i++) 
