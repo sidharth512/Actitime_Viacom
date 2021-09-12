@@ -1,0 +1,5 @@
+Baseurl=https://demo.actitime.com
+username=admin
+password=manager
+chromepath=./Drivers\\chromedriver.exe
+edgepath=./Drivers\\msedgedriver.exe
